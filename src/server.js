@@ -5,7 +5,7 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 try {
-  fastify.listen({ port: process.env.APP_PORT }, () => {
+  fastify.listen({ port: process.env.APP_PORT, host: "0.0.0.0" }, () => {
     console.log("Server start on port : ", process.env.APP_PORT);
   });
 } catch (error) {
